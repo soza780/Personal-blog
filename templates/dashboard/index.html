@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Profile{% endblock title %}
+{% block content %}
+    {{ profile.owner }}
+    {{ profile.wallet }}
+    <p>post you have created</p>
+    {% for post in posts %}
+        <img src="{{ post.img }}" alt="...">
+
+        <a href="{% url 'blog:post-detail'  post.pk %}">{{ post.title }}</a>
+
+        <p>post likes</p>
+        {{ post.likes }}
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Posts
+{% endblock %}
+{% block content %}
+{% for post in post_list %}
+    <a href="{% url 'blog:post-detail' post.pk %}">{{ post.title }}</a>
+    <a href="{% url 'blog:post-detail' post.pk %}"><img src="{{post.img}}" alt="oh sorry image does not loaded"></a>
+    {{ post.author }}
+    <p>created at{{ post.created_date }}</p>
+    {{ post.body }}
+    <p>{{ post.likes }}</p> <br>
+{% endfor %}
+
+{% endblock %}

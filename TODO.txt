@@ -1,4 +1,4 @@
 [√] about us page view and url
 [√] adding edit link to every post detail view
-[X] building an app for sending a html file as email to specific users (for admin)
-[X] an app for sending sms using kavenegar to specific users(for admin)
+[√] building an app for sending a html file as email to specific users (for admin)
+[√] an app for sending sms using kavenegar to specific users(for admin)

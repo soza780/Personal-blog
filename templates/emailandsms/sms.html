@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+admin email panel
+{% endblock %}
+{% block content %}
+<p>use (ALL) to send message to all users</p>
+    <form action="" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    {{ answer.as_p }}
+{% endblock %}

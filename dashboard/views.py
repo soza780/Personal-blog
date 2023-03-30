@@ -1,7 +1,8 @@
-from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile
+from django.shortcuts import render
+
 from blog.models import Post
+from .models import UserProfile
 
 
 # Create your views here.

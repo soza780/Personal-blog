@@ -128,4 +128,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # kavenegar API key
-API_KEY = 'your_api_key'
+API_KEY = 'https://api.kavenegar.com/v1/{API-KEY}/sms/send.json'

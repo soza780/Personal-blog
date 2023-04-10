@@ -26,3 +26,10 @@ class UserProfile(models.Model):
         :return: user email
         """
         return self.owner.email
+
+class Transcarion(models.Model):
+    """ user transaction history model. it will be kept even when user deleted account"""
+    time = models.DateTimeField(auto_now_add=True)
+    amount = models.BigIntegerField()
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    

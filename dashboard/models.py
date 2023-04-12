@@ -32,4 +32,3 @@ class Transcarion(models.Model):
     time = models.DateTimeField(auto_now_add=True)
     amount = models.BigIntegerField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    

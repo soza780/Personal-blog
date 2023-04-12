@@ -9,3 +9,8 @@
 ## how to run project locally
 
 `python manage.py runserver`
+
+##### what needs to be changed?
+- custome user must have phone number while registering
+- UI needed  😊
+- wallet can't be deposited because no bank gateway is programmed for blog(just model have a wallet database)

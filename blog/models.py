@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib.auth import get_user_model
+from account.models import CustomUser
 from django.urls import reverse
 
-user = get_user_model()
+user = CustomUser
 
 
 # Create your models here.

@@ -13,4 +13,4 @@
 ##### what needs to be changed?
 - costume user must have phone number while registering
 - UI needed  😊
-- wallet can't be deposited because no bank gateway is programmed for blog(just model have a wallet database)
+- wallet can't be deposited because no bank gateway is programmed for blog(just model have a wallet database)  

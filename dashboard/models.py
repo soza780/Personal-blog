@@ -12,6 +12,9 @@ class Transaction(models.Model):
 
 
 class UserSocialLinks(models.Model):
+    """
+    adds social accounts links to a user profile
+    """
     INSTAGRAM = "INSTAGRAM"
     GITHUB = "GITHUB"
     LINKDIN = "LINKDIN"
@@ -23,12 +26,14 @@ class UserSocialLinks(models.Model):
     )
     owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     social_type1 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
-    social_type1_link = models.CharField(max_length=255,blank=True, null=True)
+    social_type1_link = models.CharField(max_length=255, blank=True, null=True)
     social_type2 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
-    social_type2_link = models.CharField(max_length=255,blank=True, null=True)
+    social_type2_link = models.CharField(max_length=255, blank=True, null=True)
     social_type3 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
-    social_type3_link = models.CharField(max_length=255,blank=True, null=True)
+    social_type3_link = models.CharField(max_length=255, blank=True, null=True)
 
+    def __str__(self):
+        return self.owner.email
 
 
 class UserProfile(models.Model):

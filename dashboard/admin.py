@@ -15,8 +15,8 @@ class TranscationAdmin(admin.ModelAdmin):
 
 
 class SocialLinkAdmin(admin.ModelAdmin):
-    list_display = ("user",)
-    search_fields = ("user",)
+    list_display = ("owner",)
+    search_fields = ("owner",)
 
 
 admin.site.register(UserProfile, ProfileAdmin)

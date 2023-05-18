@@ -21,7 +21,7 @@ class UserSocialLinks(models.Model):
         (GITHUB, "Github"),
         (LINKDIN, "Linkdin")
     )
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     social_type1 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
     social_type1_link = models.CharField(max_length=255,blank=True, null=True)
     social_type2 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)

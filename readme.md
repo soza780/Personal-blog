@@ -2,7 +2,7 @@
 
 # blog powered by django
 
-- content managemen
+- content management
 - profile
 - admin can send email to a group of users
 

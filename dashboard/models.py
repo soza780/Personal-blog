@@ -11,6 +11,26 @@ class Transaction(models.Model):
     amount = models.BigIntegerField(blank=True, null=True)
 
 
+class UserSocialLinks(models.Model):
+    INSTAGRAM = "INSTAGRAM"
+    GITHUB = "GITHUB"
+    LINKDIN = "LINKDIN"
+
+    SOCIAL_NETWORKS = (
+        (INSTAGRAM, "Instagram"),
+        (GITHUB, "Github"),
+        (LINKDIN, "Linkdin")
+    )
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    social_type1 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
+    social_type1_link = models.CharField(max_length=255,blank=True, null=True)
+    social_type2 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
+    social_type2_link = models.CharField(max_length=255,blank=True, null=True)
+    social_type3 = models.CharField(choices=SOCIAL_NETWORKS, blank=True, null=True, max_length=100)
+    social_type3_link = models.CharField(max_length=255,blank=True, null=True)
+
+
+
 class UserProfile(models.Model):
     """
     user profile model that have three rows,

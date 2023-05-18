@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, Transaction
+from .models import UserProfile, Transaction, UserSocialLinks
 
 
 # Register your models here.
@@ -14,5 +14,11 @@ class TranscationAdmin(admin.ModelAdmin):
     search_fields = ("time", "user", "amount",)
 
 
+class SocialLinkAdmin(admin.ModelAdmin):
+    list_display = ("user",)
+    search_fields = ("user",)
+
+
 admin.site.register(UserProfile, ProfileAdmin)
 admin.site.register(Transaction, TranscationAdmin)
+admin.site.register(UserSocialLinks, SocialLinkAdmin)

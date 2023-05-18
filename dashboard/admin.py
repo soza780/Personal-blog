@@ -10,6 +10,9 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 class TranscationAdmin(admin.ModelAdmin):
+    """
+    shows transcations in admin pannel
+    """
     list_display = ("time", "user", "amount",)
     search_fields = ("time", "user", "amount",)
 
